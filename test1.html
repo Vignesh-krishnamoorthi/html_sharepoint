@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Metrics</title>
+<style>
+  /* Styles for tabs */
+  .tab {
+    display: none;
+    padding: 20px; /* Add some padding for better appearance */
+  }
+  .tab.active {
+    display: block;
+    background-color: #e9e4f3; /* Set the background color */
+  }
+
+  /* Styles for heading */
+  .heading {
+    text-align: center; /* Center the heading */
+    background-color: #ffffcc; /* Set the background color */
+    margin-top: 1px;/*  Add some top margin */
+  }
+
+ /* Styles for tab buttons */
+  .tab-buttons {
+    background-color: #ffe0b2; /* Set the background color */
+    text-align: center; /* Center align the buttons */
+  }
+
+  .tab-buttons button {
+    padding: 15px 30px; /* Increase padding to make buttons bigger */
+    font-size: 16px; /* Increase font size */
+    margin: 5px; /* Add some margin around buttons */
+  }
+
+ /* Highlight active tab button */
+  .tab-buttons button.active {
+    background-color: #f9d786; /* Change background color for active tab */
+  }
+
+.metric-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.metric {
+  width: calc(30% - 20px); /* Adjust the width of each metric block */
+  background-color: #d8e8cf;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Target every second .metric element and adjust its margin */
+.metric:nth-child(2n) {
+  margin-left: 10px; /* Add space to the left of every second metric element */
+}
+
+/* For smaller screens, adjust the width calculation */
+@media (max-width: 768px) {
+  .metric {
+    width: calc(100% - 20px);
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  .metric:nth-child(2n) {
+    margin-left: 0; /* Reset margin for every second metric element on smaller screens */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Heading -->
+<h1 class="heading">Innovation Metrics</h1>
+
+<!-- Tab buttons -->
+<div class="tab-buttons">
+  <button onclick="openTab('Delivery Head')">Delivery Head</button>
+  <button onclick="openTab('Delivery Lead')">Delivery Lead</button>
+  <button onclick="openTab('Manager')">Manager</button>
+</div>
+
+
+<!-- Tab content -->
+<div id="Delivery Head" class="tab active">
+  <h2>PILLARS</h2>
+  <h3>2024</h3>
+  
+  <div class="metric">
+    <h3>Spring Board</h3>
+    <p>Count: 100</p>
+  </div>
+  
+  <div class="metric">
+    <h3>Quick Hits</h3>
+    <p>Count: 200</p>
+  </div>
+  
+  <div class="metric">
+    <h3>Patents</h3>
+    <p>Count: 300</p>
+  </div>
+</div>
+
+
+<div id="Delivery Lead" class="tab">
+  <h2>Tab 2 Content</h2>
+  <p>This is the content of Tab 2.</p>
+</div>
+
+<div id="Manager" class="tab">
+  <h2>Tab 3 Content</h2>
+  <p>This is the content of Tab 3.</p>
+</div>
+
+<script>
+  function openTab(tabName) {
+    var i, tabContent;
+    tabContent = document.getElementsByClassName("tab");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].classList.remove("active");
+    }
+    document.getElementById(tabName).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
