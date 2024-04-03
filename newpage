@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<script>
+    function getInputValue(){
+
+
+  // This is  get the value of ID.
+   alert(document.getElementById("ID").value);
+   
+  // This is  get the value of Title.
+  alert(document.getElementById("Title").value);
+ 
+   // This is  get the value of TitleDescription.
+   alert(document.getElementById("TitleDescription").value);
+
+        //This is get the value of PillarName.
+        var pillarname = PillarName.value;
+        alert(pillarname);
+
+   // This is  get the value of InnovationPath.
+   alert(document.getElementById("InnovationPath").value);
+
+           //This is get the value of CurrentStatus.
+           var currstat = CurrentStatus.value;
+        alert(currstat);
+
+           // This is  get the value of Owner.
+   alert(document.getElementById("Owner").value);
+      // This is  get the value of Manager.
+      alert(document.getElementById("Manager").value);
+         // This is  get the value of DL.
+   alert(document.getElementById("DL").value);
+      // This is  get the value of DH.
+      alert(document.getElementById("DH").value);
+
+            // This is  get the value of OwnerEmail.
+            alert(document.getElementById("OwnerEmail").value);
+
+                    //This is get the value of SubmissionDate.
+        alert(document.getElementById("SubmissionDate").value )  ;
+
+        }
+</script>
+<body>
+    <div class="container">
+        <h3 style="color: darkgreen; margin-bottom: 50px;">Add Data For Innovation Dashboard:</h3>
+        <form>
+            <div class="form-group">
+                <label for="Id">ID: </label>
+                <input type="text" class="form-control" id="ID" placeholder="Enter Id">
+            </div>
+            <div class="form-group">
+                <label for="Title"> Title: </label>
+                <input type="text" class="form-control" id="Title" placeholder="Enter Title">
+            </div>
+            <div class="form-group">
+                <label for="TitleDescription"> Title Description: </label>
+                <textarea class="form-control" rows="4" id="TitleDescription">
+
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label for="PillarName"> Pillar Name:</label>
+                <select class="form-control" id="PillarName">
+                    <option> Patent </option>
+                    <option> Spring Board </option>
+                    <option> Quick Hits </option>
+                    <option> JDI </option>
+                    <option> temp1 </option>
+                    <option> temp3 </option>
+                    <option> temp2 </option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="InnovationPath"> Innovation Path: </label>
+                <input type="text" class="form-control" id="InnovationPath" placeholder="Enter Innovation Path">
+            </div>
+            <div class="form-group">
+                <label for="CurrentStatus"> Current Status:</label>
+                <select class="form-control" id="CurrentStatus">
+                    <option> Submitted </option>
+                    <option> Pending Approval </option>
+                    <option> Approved </option>
+                    <option> temp5 </option>
+                    <option> temp1 </option>
+                    <option> temp3 </option>
+                    <option> temp2 </option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Owner"> Owner: </label>
+                <input type="text" class="form-control" id="Owner">
+            </div>
+            <div class="form-group">
+                <label for="Manager"> Manager: </label>
+                <input type="text" class="form-control" id="Manager">
+            </div>
+            <div class="form-group">
+                <label for="DL"> DL: </label>
+                <input type="text" class="form-control" id="DL">
+            </div>
+            <div class="form-group">
+                <label for="DH"> DH: </label>
+                <input type="text" class="form-control" id="DH">
+            </div>
+            <div class="form-group">
+                <label for="OwnerEmail"> Owner Email ID: </label>
+                <input type="email" class="form-control" id="OwnerEmail">
+            </div>
+            <div class="form-group">
+                <label for="SubmissionDate"> Submission Date : </label>
+                <input type="date" id="SubmissionDate">
+            </div>
+
+
+            <div class="form-group" style="margin-top: 50px;">
+
+                <button type="button" class="btn btn-primary" onclick="getInputValue();"> SUBMIT </button>
+                <button type="reset" class="btn btn-secondary"> RESET </button>
+
+            </div>
+        </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
