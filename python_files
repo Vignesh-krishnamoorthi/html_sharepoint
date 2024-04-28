@@ -1,0 +1,30 @@
+my_project/
+│
+├── my_package/
+│   ├── __init__.py
+│   ├── main_module.py
+│   └── config.ini
+└── setup.py
+
+from setuptools import setup, find_packages
+
+setup(
+    name='my_package',
+    version='1.0',
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        # List dependencies here if needed
+    ],
+)
+
+include my_package/config.ini
+
+
+python setup.py sdist
+pip install /path/to/your/package/dist/my_package-1.0.tar.gz
+
+from my_package import main_module
+
+main_module.some_function()
+
